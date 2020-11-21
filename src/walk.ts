@@ -1,13 +1,8 @@
 // [TODO] remove this deps
 import * as R from "rambda";
-import {emitter} from "./emitter";
+import {emitter, isArray, isObject} from "./utils";
 
 type Input = Record<string, any> | any[];
-
-export const isArray = (input: any): input is any[] => Array.isArray(input);
-
-export const isObject = (input: any): input is Record<string, any> =>
-  (typeof input === "object" || typeof input === "function") && input !== null;
 
 export type WalkCtx = {
   isRoot?: boolean;
