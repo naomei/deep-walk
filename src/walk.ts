@@ -1,5 +1,4 @@
-// [TODO] remove this deps
-import * as R from "rambda";
+import { isEmpty } from "./utils";
 import {emitter, isArray, isObject} from "./utils";
 
 type Input = Record<string, any> | any[];
@@ -17,10 +16,8 @@ export const walk = (input: Input) => {
   const evEmitter = emitter<WalkCtx>();
 
   const traverse = (value: any): void => {
-    const isLeaf = !isArray(value) && !isObject(value);
-    
-    // [TODO] remove Rambda deps
-    const shouldFinish = R.isEmpty(value) || isLeaf;
+    const isLeaf = !isArray(value) && !isObject(value);    
+    const shouldFinish = isEmpty(value) || isLeaf;
 
     evEmitter.emit({
       isRoot,
