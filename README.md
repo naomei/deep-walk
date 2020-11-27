@@ -1,3 +1,7 @@
+![dep](https://badgen.net/bundlephobia/dependency-count/deep-walk)
+![min](https://img.shields.io/bundlephobia/min/deep-walk)
+![minZip](https://img.shields.io/bundlephobia/minzip/deep-walk)
+
 traverse objects by every node on a recursive.
 
 # Apis
