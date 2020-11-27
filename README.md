@@ -4,7 +4,13 @@
 
 traverse objects by every node on a recursive.
 
-# Apis
+# usage
+
+```bash
+npm i deep-walk -S
+```
+
+# apis
 
 ## each
 
