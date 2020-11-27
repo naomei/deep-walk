@@ -1,17 +1,32 @@
 {
-  "name": "walk",
+  "name": "deep-walk",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "traverse objects on a recursive",
+  "main": "dist/index.js",
+  "author": "Naohiro Urayama <naohiro.urayama@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naomei/walk.git"
+  },
+  "keywords": [
+    "typescript",
+    "traverse",
+    "walk",
+    "objects",
+    "each",
+    "reduce",
+    "utility"
+  ],
   "scripts": {
     "test": "jest --watch",
-    "tsc": "tsc --noEmit -w"
+    "build": "esbuild src/index.ts --bundle '--define:process.env.NODE_ENV=\"production\"' --minify --outfile=dist/index.js && npm run ts-build",
+    "ts-build": "tsc --build tsconfig.json"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^26.0.15",
+    "esbuild": "^0.8.16",
     "jest": "^26.6.3",
     "ts-jest": "^26.4.3",
     "typescript": "^4.1.2"
