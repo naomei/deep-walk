@@ -7,6 +7,8 @@ traverse objects by every node on a recursive.
 execute fn for each node in the object.
 
 ```ts
+import { walk } from "deep-walk";
+
 walk({ a: { b: "" }, c: ["A", "B"] }).each((ctx) => {...});
 ```
 
@@ -15,6 +17,8 @@ walk({ a: { b: "" }, c: ["A", "B"] }).each((ctx) => {...});
 each node in the object, perform a left-fold with the return value of function.
 
 ```ts
+import { walk } from "deep-walk";
+
 const result = walk({ a: { b: "" }, c: ["A", "B"] }).reduce<string[]>(
   (ctx, acc) => {
     if(ctx.isLeaf){

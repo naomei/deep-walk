@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/naomei/walk.git"
+    "url": "https://github.com/naomei/deep-walk.git"
   },
   "keywords": [
     "typescript",
